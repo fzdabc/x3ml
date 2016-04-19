@@ -1,0 +1,15 @@
+@prefix gen:     <http://gen.ns/#> .
+@prefix pre:     <http://base.ns/#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://gen.ns/#/Title,Identifier>
+      a       pre:Thing ;
+      pre:Relation1 <urn:uuid:18704918-0241-4ce6-b59b-5ef34854353d> .
+
+<urn:uuid:18704918-0241-4ce6-b59b-5ef34854353d>
+      a       pre:IntermediateEntity ;
+      pre:Relation2 <http://gen.ns/#/OT> .
+
+<http://gen.ns/#/OT>
+      a       pre:OtherThing ;
+      rdfs:label "Other Title"@en .

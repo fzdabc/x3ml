@@ -1,0 +1,15 @@
+@prefix xxx:     <http://xxx.eu/#> .
+@prefix lido:    <http://www.lido-schema.org> .
+@prefix crm:     <http://purl.org/NET/cidoc-crm/core#> .
+
+<http://xxx.eu/#/Germanic%20National%20Museum%2C%20Graphical%20Collection%20%28Nuremberg%29,H%203672>
+      a       crm:E19_Physical_Object ;
+      crm:P2_has_type <http://xxx.eu/#/E84%20Information%20Carrier> ;
+      crm:P70_is_documented_in
+              <http://xxx.eu/#/E31_Document> .
+
+<http://xxx.eu/#/E84%20Information%20Carrier>
+      a       crm:E55_Type .
+
+<http://xxx.eu/#/E31_Document>
+      a       crm:E31_Document .

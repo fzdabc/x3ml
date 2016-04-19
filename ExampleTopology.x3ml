@@ -1,0 +1,1443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x3ml version="1.0" source_type="xpath">
+    <info>
+        <title>ExampleTolopogy</title>
+        <general_description>Sample test</general_description>
+        <source_info>
+            <source_schema type="?" version="">?</source_schema>
+            <source_collection>?</source_collection>
+        </source_info>
+        <target_info>
+            <target_schema schema_file="" type="" version="">?</target_schema>
+            <target_collection/>
+        </target_info>
+        <target_info>
+            <target_schema schema_file="" type="" version="">?</target_schema>
+            <target_collection/>
+        </target_info>
+        <mapping_info>
+            <mapping_created_by_org>?</mapping_created_by_org>
+            <mapping_created_by_person>?</mapping_created_by_person>
+            <in_collaboration_with/>
+        </mapping_info>
+        <example_data_info>
+            <example_data_from>?</example_data_from>
+            <example_data_contact_person>?</example_data_contact_person>
+            <example_data_source_record xml_link="?">?</example_data_source_record>
+            <example_data_target_record rdf_link="">?</example_data_target_record>
+        </example_data_info>
+    </info>
+    <namespaces>
+        <namespace prefix="rdf" uri="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+        <namespace prefix="rdfs" uri="http://www.w3.org/2000/01/rdf-schema#"/>
+        <namespace prefix="dc" uri="http://purl.org/dc/elements/1.1/"/>
+        <namespace prefix="aml" uri="http://vocab.cs.uni-bonn.de/aml#"/>
+        <namespace prefix="xsd" uri="http://www.w3.org/2001/XMLSchema#"/>
+        <namespace prefix="schema" uri="http://schema.org/"/>
+    </namespaces>
+    <mappings>
+        <mapping>
+            <domain>
+                <source_node>//CAEXFile</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:CAEXFile</type>
+                        <instance_generator name="ID">
+                            <arg name="identifier" type="constant">CAEXFile</arg>
+                        </instance_generator>                    
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                        <relation>AdditionalInformation</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasFileName</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>AdditionalInformation</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">//CAEXFile/@FileName</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--FileName -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//CAEXFile</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:CAEXFile</type>
+                        <instance_generator name="UUID"/>
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                        <relation>AdditionalInformation</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasSchemeVersion</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>AdditionalInformation</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">//CAEXFile/@SchemaVersion</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!-- --><!--SchemaVersion -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//CAEXFile</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:CAEXFile</type>
+                        <instance_generator name="ID">
+                            <arg name="identifier" type="constant">CAEXFile</arg>
+                        </instance_generator>
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                       <relation>AdditionalInformation</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasAdditionalInformation</relationship>
+                        <entity>
+                            <type>aml:AdditionalInformation</type>
+                            <instance_generator name="UUID"/>
+                        </entity>
+                        <relationship>aml:hasAutomationMLVersion</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>AdditionalInformation</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">//AdditionalInformation/@AutomationMLVersion</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--AutomationMLVersion -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//CAEXFile</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:CAEXFile</type>
+                        <instance_generator name="ID">
+                            <arg name="identifier" type="constant">CAEXFile</arg>
+                        </instance_generator>
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                       <relation>ExternalReference</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasExternalReference</relationship>
+                        <entity>
+                            <type>aml:ExternalReference</type>
+                            <instance_generator name="UUID"/>
+                        </entity>
+                        <relationship>aml:externalReferencePath</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>ExternalReference</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">@Path</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--externalReferencePath-->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//CAEXFile</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:CAEXFile</type>
+                        <instance_generator name="ID">
+                            <arg name="identifier" type="constant">CAEXFile</arg>
+                        </instance_generator>
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                       <relation>ExternalReference</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasExternalReference</relationship>
+                        <entity>
+                            <type>aml:ExternalReference</type>
+                            <instance_generator name="UUID"/>
+                        </entity>
+                        <relationship>aml:externalReferenceAlias</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>ExternalReference</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">@Alias</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--externalReferenceAlias-->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//AdditionalInformation</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:AdditionalInformation</type>
+                        <instance_generator name="UUID"/>             
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                        <relation>WriterHeader</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasWriterName</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>WriterHeader</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">//WriterHeader/WriterName/text()</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--AdditionalInfomation , WriterName -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//AdditionalInformation</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:AdditionalInformation</type>
+                        <instance_generator name="UUID"/>             
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                        <relation>WriterHeader</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasWriterID</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>WriterHeader</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">//WriterHeader/WriterID/text()</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--AdditionalInfomation , WriterID -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//AdditionalInformation</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:AdditionalInformation</type>
+                        <instance_generator name="UUID"/>             
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                        <relation>WriterHeader</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasWriterVendor</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>WriterHeader</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">//WriterHeader/WriterVendor/text()</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--AdditionalInfomation , WriterVendor -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//AdditionalInformation</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:AdditionalInformation</type>
+                        <instance_generator name="UUID"/>             
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                        <relation>WriterHeader</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasWriterVendorURL</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>WriterHeader</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">//WriterHeader/WriterVendorURL/text()</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--AdditionalInfomation , WriterVendorURL -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//AdditionalInformation</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:AdditionalInformation</type>
+                        <instance_generator name="UUID"/>             
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                        <relation>WriterHeader</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasWriterVersion</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>WriterHeader</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">//WriterHeader/WriterVersion/text()</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--AdditionalInfomation , WriterVersion -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//AdditionalInformation</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:AdditionalInformation</type>
+                        <instance_generator name="UUID"/>             
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                        <relation>WriterHeader</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasWriterRelease</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>WriterHeader</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">//WriterHeader/WriterRelease/text()</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--AdditionalInfomation , WriterRelease -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//AdditionalInformation</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:AdditionalInformation</type>
+                        <instance_generator name="UUID"/>             
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                        <relation>WriterHeader</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasLastWritingDateTime</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>WriterHeader</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">//WriterHeader/LastWritingDateTime/text()</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--AdditionalInfomation , LastWritingDateTime -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//AdditionalInformation</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:AdditionalInformation</type>
+                        <instance_generator name="UUID"/>             
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                        <relation>WriterHeader</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasWriterProjectTitle</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>WriterHeader</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">//WriterHeader/WriterProjectTitle/text()</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--AdditionalInfomation , WriterProjectTitle -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//AdditionalInformation</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:AdditionalInformation</type>
+                        <instance_generator name="UUID"/>             
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                        <relation>WriterHeader</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasWriterProjectID</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>WriterHeader</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">//WriterHeader/WriterProjectID/text()</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--AdditionalInfomation , WriterProjectID -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//CAEXFile</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:CAEXFile</type>
+                        <instance_generator name="ID">
+                            <arg name="identifier" type="constant">CAEXFile</arg>
+                        </instance_generator>
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                       <relation>InstanceHierarchy</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasInstanceHierarchy</relationship>
+                        <entity>
+                            <type>aml:InstanceHierarchy</type>
+                            <instance_generator name="UUID"/>
+                        </entity>
+                        <relationship>schema:name</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>InstanceHierarchy</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">//InstanceHierarchy/@Name</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--InstanceHierarchy , name -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//InstanceHierarchy</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:InstanceHierarchy</type>
+                        <instance_generator name="UUID"/>
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                       <relation>InternalElement</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasInternalElement</relationship>
+                        <entity>
+                            <type>aml:InternalElement</type>
+                            <instance_generator name="UUID"/>
+                        </entity>
+                        <relationship>schema:name</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>InternalElement</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">@Name</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--InstanceHierarchy,InternalElement -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//InstanceHierarchy</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:InstanceHierarchy</type>
+                        <instance_generator name="UUID"/>
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                       <relation>InternalElement</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasInternalElement</relationship>
+                        <entity>
+                            <type>aml:InternalElement</type>
+                            <instance_generator name="UUID"/>
+                        </entity>
+                        <relationship>dc:identifier</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>InternalElement</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">@ID</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--InstanceHierarchy,InternalElementID -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//InstanceHierarchy</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:InstanceHierarchy</type>
+                        <instance_generator name="UUID"/>
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                       <relation>InternalElement</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasInternalElement</relationship>
+                        <entity>
+                            <type>aml:InternalElement</type>
+                            <instance_generator name="UUID"/>
+                        </entity>
+                        <relationship>aml:RefBaseSystemUnitPath</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>InternalElement</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">@RefBaseSystemUnitPath</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--InstanceHierarchy,InternalElement RefBaseSystemUnitPath -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//InternalElement</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:InternalElement</type>
+                        <instance_generator name="UUID"/>
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                       <relation>Attribute</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasAttribute</relationship>
+                        <entity>
+                            <type>aml:Attribute</type>
+                            <instance_generator name="UUID"/>
+                        </entity>
+                        <relationship>schema:name</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>Attribute</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">@Name</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--InstanceHierarchy,InternalElement Attribute -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//InternalElement</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:InternalElement</type>
+                        <instance_generator name="UUID"/>
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                       <relation>ExternalInterface</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasExternalInterface</relationship>
+                        <entity>
+                            <type>aml:ExternalInterface</type>
+                            <instance_generator name="UUID"/>
+                        </entity>
+                        <relationship>schema:name</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>ExternalInterface</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">@Name</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--InstanceHierarchy,ExternalInterface Name -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//InternalElement</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:InternalElement</type>
+                        <instance_generator name="UUID"/>
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                       <relation>ExternalInterface</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasExternalInterface</relationship>
+                        <entity>
+                            <type>aml:ExternalInterface</type>
+                            <instance_generator name="UUID"/>
+                        </entity>
+                        <relationship>dc:identifier</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>ExternalInterface</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">@ID</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--InstanceHierarchy,ExternalInterface ID -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//InternalElement</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:InternalElement</type>
+                        <instance_generator name="UUID"/>
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                       <relation>ExternalInterface</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasExternalInterface</relationship>
+                        <entity>
+                            <type>aml:ExternalInterface</type>
+                            <instance_generator name="UUID"/>
+                        </entity>
+                        <relationship>aml:refBaseClassPath</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>ExternalInterface</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">@RefBaseClassPath</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--InstanceHierarchy,ExternalInterface RefBaseClassPath -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//InternalElement</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:InternalElement</type>
+                        <instance_generator name="UUID"/>
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                       <relation>SupportedRoleClass</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasSupportedRoleClass</relationship>
+                        <entity>
+                            <type>aml:SupportedRoleClass</type>
+                            <instance_generator name="UUID"/>
+                        </entity>
+                        <relationship>aml:refRoleClassPath</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>SupportedRoleClass</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">@RefRoleClassPath</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--InstanceHierarchy,SupportedRoleClass RefRoleClassPath -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//InternalElement</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:InternalElement</type>
+                        <instance_generator name="UUID"/>
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                       <relation>RoleRequirements</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasRoleRequirements</relationship>
+                        <entity>
+                            <type>aml:RoleRequirements</type>
+                            <instance_generator name="UUID"/>
+                        </entity>
+                        <relationship>aml:refBaseRoleClassPath</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>RoleRequirements</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">@RefBaseRoleClassPath</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--InstanceHierarchy,RoleRequirements RefBaseRoleClassPath -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//CAEXFile</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:CAEXFile</type>
+                        <instance_generator name="ID">
+                            <arg name="identifier" type="constant">CAEXFile</arg>
+                        </instance_generator>
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                       <relation>InterfaceClassLib</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasInterfaceClassLib</relationship>
+                        <entity>
+                            <type>aml:InterfaceClassLib</type>
+                            <instance_generator name="UUID"/>
+                        </entity>
+                        <relationship>schema:name</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>InterfaceClassLib</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">@Name</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--InterfaceClassLib , name -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//InterfaceClassLib</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:InterfaceClassLib</type>
+                        <instance_generator name="UUID"/>
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                       <relation>Version</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasVersion</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>Version</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">text()</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--InterfaceClassLib IVersion -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//InterfaceClassLib</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:InterfaceClassLib</type>
+                        <instance_generator name="UUID"/>
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                       <relation>InterfaceClass</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasInterfaceClass</relationship>
+                        <entity>
+                            <type>aml:InterfaceClass</type>
+                            <instance_generator name="UUID"/>
+                        </entity>
+                        <relationship>schema:name</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>InterfaceClass</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">@Name</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--InterfaceClass name -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//InterfaceClassLib</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:InterfaceClassLib</type>
+                        <instance_generator name="UUID"/>
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                       <relation>InterfaceClass</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasInterfaceClass</relationship>
+                        <entity>
+                            <type>aml:InterfaceClass</type>
+                            <instance_generator name="UUID"/>
+                        </entity>
+                        <relationship>aml:refBaseClassPath</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>InterfaceClass</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">@RefBaseClassPath</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--InterfaceClass RefBaseClassPath -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//CAEXFile</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:CAEXFile</type>
+                        <instance_generator name="ID">
+                            <arg name="identifier" type="constant">CAEXFile</arg>
+                        </instance_generator>
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                       <relation>RoleClassLib</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasRoleClassLib</relationship>
+                        <entity>
+                            <type>aml:RoleClassLib</type>
+                            <instance_generator name="UUID"/>
+                        </entity>
+                        <relationship>schema:name</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>RoleClassLib</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">@Name</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--RoleClassLib , name -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//RoleClassLib</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:RoleClassLib</type>
+                        <instance_generator name="UUID"/>
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                       <relation>Version</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasVersion</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>Version</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">text()</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--RoleClassLib Version -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//RoleClassLib</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:RoleClassLib</type>
+                        <instance_generator name="UUID"/>
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                       <relation>RoleClass</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasRoleClass</relationship>
+                        <entity>
+                            <type>aml:RoleClass</type>
+                            <instance_generator name="UUID"/>
+                        </entity>
+                        <relationship>schema:name</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>RoleClass</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">@Name</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--RoleClass name -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//RoleClassLib</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:RoleClassLib</type>
+                        <instance_generator name="UUID"/>
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                       <relation>RoleClass</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasRoleClass</relationship>
+                        <entity>
+                            <type>aml:RoleClass</type>
+                            <instance_generator name="UUID"/>
+                        </entity>
+                        <relationship>aml:refBaseClassPath</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>RoleClass</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">@RefBaseClassPath</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--RoleClass RefBaseClassPath -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//CAEXFile</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:CAEXFile</type>
+                        <instance_generator name="ID">
+                            <arg name="identifier" type="constant">CAEXFile</arg>
+                        </instance_generator>
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                       <relation>SystemUnitClassLib</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasSystemUnitClassLib</relationship>
+                        <entity>
+                            <type>aml:SystemUnitClassLib</type>
+                            <instance_generator name="UUID"/>
+                        </entity>
+                        <relationship>schema:name</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>SystemUnitClassLib</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">@Name</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--SystemUnitClassLib , name -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//SystemUnitClassLib</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:SystemUnitClassLib</type>
+                        <instance_generator name="UUID"/>
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                       <relation>Version</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasVersion</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>Version</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">text()</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--SystemUnitClassLib Version -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//SystemUnitClassLib</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:SystemUnitClassLib</type>
+                        <instance_generator name="UUID"/>
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                       <relation>SystemUnitClass</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasSystemUnitClass</relationship>
+                        <entity>
+                            <type>aml:SystemUnitClass</type>
+                            <instance_generator name="UUID"/>
+                        </entity>
+                        <relationship>schema:name</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>SystemUnitClass</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">@Name</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--SystemUnitClass name -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//SystemUnitClass</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:SystemUnitClass</type>
+                        <instance_generator name="UUID"/>
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                       <relation>ExternalInterface</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasExternalInterface</relationship>
+                        <entity>
+                            <type>aml:ExternalInterface</type>
+                            <instance_generator name="UUID"/>
+                        </entity>
+                        <relationship>schema:name</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>ExternalInterface</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">@Name</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--SystemUnitClassLib,ExternalInterface Name -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//SystemUnitClass</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:SystemUnitClass</type>
+                        <instance_generator name="UUID"/>
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                       <relation>ExternalInterface</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasExternalInterface</relationship>
+                        <entity>
+                            <type>aml:ExternalInterface</type>
+                            <instance_generator name="UUID"/>
+                        </entity>
+                        <relationship>dc:identifier</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>ExternalInterface</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">@ID</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--SystemUnitClass,ExternalInterface ID -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//SystemUnitClass</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:SystemUnitClass</type>
+                        <instance_generator name="UUID"/>
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                       <relation>ExternalInterface</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasExternalInterface</relationship>
+                        <entity>
+                            <type>aml:ExternalInterface</type>
+                            <instance_generator name="UUID"/>
+                        </entity>
+                        <relationship>aml:refBaseClassPath</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>ExternalInterface</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">@RefBaseClassPath</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--SystemUnitClass,ExternalInterface RefBaseClassPath -->
+        </mapping>
+        <mapping>
+            <domain>
+                <source_node>//SystemUnitClass</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:SystemUnitClass</type>
+                        <instance_generator name="UUID"/>
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                       <relation>SupportedRoleClass</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasSupportedRoleClass</relationship>
+                        <entity>
+                            <type>aml:SupportedRoleClass</type>
+                            <instance_generator name="UUID"/>
+                        </entity>
+                        <relationship>aml:refRoleClassPath</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>SupportedRoleClass</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">@RefRoleClassPath</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link><!--SystemUnitClass,SupportedRoleClass RefRoleClassPath -->
+        </mapping>
+    </mappings>
+    <comments>
+        <comment type="Thesis">
+            <rationale>Industry 4.0 Usecase Evaluation</rationale>
+            <alternatives>?</alternatives>
+            <typical_mistakes>?</typical_mistakes>
+            <local_habits>?</local_habits>
+            <link_to_cook_book>?</link_to_cook_book>
+            <example>
+                <example_source>AutomationML</example_source>
+                <example_target>AutomationML</example_target>
+            </example>
+            <comments_last_update person="me" date="2016-04-07">2016-04-07</comments_last_update>
+        </comment>
+    </comments>
+</x3ml>

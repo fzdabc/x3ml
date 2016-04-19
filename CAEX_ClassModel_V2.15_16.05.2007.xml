@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CAEXFile ChangeMode="state" FileName="" SchemaVersion="2.15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CAEX_ClassModel_V2.15_16.05.2007.xsd">
+  <ExternalReference Alias="" ChangeMode="state" Path=""/>
+  <InstanceHierarchy ChangeMode="state" ID="" Name="">
+    <InternalElement ChangeMode="state" ID="" Name="" RefBaseSystemUnitPath="">
+      <Attribute AttributeDataType="" ChangeMode="state" ID="" Name="" Unit="">
+        <DefaultValue xsi:type="anyType"/>
+        <Value xsi:type="anyType"/>
+        <RefSemantic ChangeMode="state" CorrespondingAttributePath=""/>
+        <Constraint ChangeMode="state" Name="">
+          <OrdinalScaledType>
+            <RequiredMaxValue xsi:type="anyType"/>
+            <RequiredValue xsi:type="anyType"/>
+            <RequiredMinValue xsi:type="anyType"/>
+          </OrdinalScaledType>
+        </Constraint>
+        <Attribute AttributeDataType="" ChangeMode="state" ID="" Name="" Unit=""/>
+      </Attribute>
+      <ExternalInterface ChangeMode="state" ID="" Name="" RefBaseClassPath="" xsi:type="InterfaceClassType">
+        <Attribute AttributeDataType="" ChangeMode="state" ID="" Name="" Unit="">
+          <DefaultValue xsi:type="anyType"/>
+          <Value xsi:type="anyType"/>
+          <RefSemantic ChangeMode="state" CorrespondingAttributePath=""/>
+          <Constraint ChangeMode="state" Name="">
+            <OrdinalScaledType>
+              <RequiredMaxValue xsi:type="anyType"/>
+              <RequiredValue xsi:type="anyType"/>
+              <RequiredMinValue xsi:type="anyType"/>
+            </OrdinalScaledType>
+          </Constraint>
+          <Attribute AttributeDataType="" ChangeMode="state" ID="" Name="" Unit=""/>
+        </Attribute>
+      </ExternalInterface>
+      <InternalElement ChangeMode="state" ID="" Name="" RefBaseSystemUnitPath=""/>
+      <SupportedRoleClass ChangeMode="state" RefRoleClassPath="">
+        <MappingObject ChangeMode="state">
+          <AttributeNameMapping ChangeMode="state" RoleAttributeName="" SystemUnitAttributeName=""/>
+          <InterfaceNameMapping ChangeMode="state" RoleInterfaceName="" SystemUnitInterfaceName=""/>
+        </MappingObject>
+      </SupportedRoleClass>
+      <InternalLink ChangeMode="state" ID="" Name="" RefPartnerSideA="" RefPartnerSideB=""/>
+      <RoleRequirements ChangeMode="state" RefBaseRoleClassPath="">
+        <Attribute AttributeDataType="" ChangeMode="state" ID="" Name="" Unit="">
+          <DefaultValue xsi:type="anyType"/>
+          <Value xsi:type="anyType"/>
+          <RefSemantic ChangeMode="state" CorrespondingAttributePath=""/>
+          <Constraint ChangeMode="state" Name="">
+            <OrdinalScaledType>
+              <RequiredMaxValue xsi:type="anyType"/>
+              <RequiredValue xsi:type="anyType"/>
+              <RequiredMinValue xsi:type="anyType"/>
+            </OrdinalScaledType>
+          </Constraint>
+          <Attribute AttributeDataType="" ChangeMode="state" ID="" Name="" Unit=""/>
+        </Attribute>
+        <ExternalInterface ChangeMode="state" ID="" Name="" RefBaseClassPath="" xsi:type="InterfaceClassType">
+          <Attribute AttributeDataType="" ChangeMode="state" ID="" Name="" Unit="">
+            <DefaultValue xsi:type="anyType"/>
+            <Value xsi:type="anyType"/>
+            <RefSemantic ChangeMode="state" CorrespondingAttributePath=""/>
+            <Constraint ChangeMode="state" Name="">
+              <OrdinalScaledType>
+                <RequiredMaxValue xsi:type="anyType"/>
+                <RequiredValue xsi:type="anyType"/>
+                <RequiredMinValue xsi:type="anyType"/>
+              </OrdinalScaledType>
+            </Constraint>
+            <Attribute AttributeDataType="" ChangeMode="state" ID="" Name="" Unit=""/>
+          </Attribute>
+        </ExternalInterface>
+      </RoleRequirements>
+      <MappingObject ChangeMode="state">
+        <AttributeNameMapping ChangeMode="state" RoleAttributeName="" SystemUnitAttributeName=""/>
+        <InterfaceNameMapping ChangeMode="state" RoleInterfaceName="" SystemUnitInterfaceName=""/>
+      </MappingObject>
+    </InternalElement>
+  </InstanceHierarchy>
+  <InterfaceClassLib ChangeMode="state" ID="" Name="">
+    <InterfaceClass ChangeMode="state" ID="" Name="" RefBaseClassPath="">
+      <Attribute AttributeDataType="" ChangeMode="state" ID="" Name="" Unit="">
+        <DefaultValue xsi:type="anyType"/>
+        <Value xsi:type="anyType"/>
+        <RefSemantic ChangeMode="state" CorrespondingAttributePath=""/>
+        <Constraint ChangeMode="state" Name="">
+          <OrdinalScaledType>
+            <RequiredMaxValue xsi:type="anyType"/>
+            <RequiredValue xsi:type="anyType"/>
+            <RequiredMinValue xsi:type="anyType"/>
+          </OrdinalScaledType>
+        </Constraint>
+        <Attribute AttributeDataType="" ChangeMode="state" ID="" Name="" Unit=""/>
+      </Attribute>
+      <InterfaceClass ChangeMode="state" ID="" Name="" RefBaseClassPath=""/>
+    </InterfaceClass>
+  </InterfaceClassLib>
+  <RoleClassLib ChangeMode="state" ID="" Name="">
+    <RoleClass ChangeMode="state" ID="" Name="" RefBaseClassPath="">
+      <Attribute AttributeDataType="" ChangeMode="state" ID="" Name="" Unit="">
+        <DefaultValue xsi:type="anyType"/>
+        <Value xsi:type="anyType"/>
+        <RefSemantic ChangeMode="state" CorrespondingAttributePath=""/>
+        <Constraint ChangeMode="state" Name="">
+          <OrdinalScaledType>
+            <RequiredMaxValue xsi:type="anyType"/>
+            <RequiredValue xsi:type="anyType"/>
+            <RequiredMinValue xsi:type="anyType"/>
+          </OrdinalScaledType>
+        </Constraint>
+        <Attribute AttributeDataType="" ChangeMode="state" ID="" Name="" Unit=""/>
+      </Attribute>
+      <ExternalInterface ChangeMode="state" ID="" Name="" RefBaseClassPath="">
+        <Attribute AttributeDataType="" ChangeMode="state" ID="" Name="" Unit="">
+          <DefaultValue xsi:type="anyType"/>
+          <Value xsi:type="anyType"/>
+          <RefSemantic ChangeMode="state" CorrespondingAttributePath=""/>
+          <Constraint ChangeMode="state" Name="">
+            <OrdinalScaledType>
+              <RequiredMaxValue xsi:type="anyType"/>
+              <RequiredValue xsi:type="anyType"/>
+              <RequiredMinValue xsi:type="anyType"/>
+            </OrdinalScaledType>
+          </Constraint>
+          <Attribute AttributeDataType="" ChangeMode="state" ID="" Name="" Unit=""/>
+        </Attribute>
+      </ExternalInterface>
+      <RoleClass ChangeMode="state" ID="" Name="" RefBaseClassPath=""/>
+    </RoleClass>
+  </RoleClassLib>
+  <SystemUnitClassLib ChangeMode="state" ID="" Name="">
+    <SystemUnitClass ChangeMode="state" ID="" Name="" RefBaseClassPath="">
+      <Attribute AttributeDataType="" ChangeMode="state" ID="" Name="" Unit="">
+        <DefaultValue xsi:type="anyType"/>
+        <Value xsi:type="anyType"/>
+        <RefSemantic ChangeMode="state" CorrespondingAttributePath=""/>
+        <Constraint ChangeMode="state" Name="">
+          <OrdinalScaledType>
+            <RequiredMaxValue xsi:type="anyType"/>
+            <RequiredValue xsi:type="anyType"/>
+            <RequiredMinValue xsi:type="anyType"/>
+          </OrdinalScaledType>
+        </Constraint>
+        <Attribute AttributeDataType="" ChangeMode="state" ID="" Name="" Unit=""/>
+      </Attribute>
+      <ExternalInterface ChangeMode="state" ID="" Name="" RefBaseClassPath="" xsi:type="InterfaceClassType">
+        <Attribute AttributeDataType="" ChangeMode="state" ID="" Name="" Unit="">
+          <DefaultValue xsi:type="anyType"/>
+          <Value xsi:type="anyType"/>
+          <RefSemantic ChangeMode="state" CorrespondingAttributePath=""/>
+          <Constraint ChangeMode="state" Name="">
+            <OrdinalScaledType>
+              <RequiredMaxValue xsi:type="anyType"/>
+              <RequiredValue xsi:type="anyType"/>
+              <RequiredMinValue xsi:type="anyType"/>
+            </OrdinalScaledType>
+          </Constraint>
+          <Attribute AttributeDataType="" ChangeMode="state" ID="" Name="" Unit=""/>
+        </Attribute>
+      </ExternalInterface>
+      <InternalElement ChangeMode="state" ID="" Name="" RefBaseSystemUnitPath="">
+        <RoleRequirements ChangeMode="state" RefBaseRoleClassPath="">
+          <Attribute AttributeDataType="" ChangeMode="state" ID="" Name="" Unit="">
+            <DefaultValue xsi:type="anyType"/>
+            <Value xsi:type="anyType"/>
+            <RefSemantic ChangeMode="state" CorrespondingAttributePath=""/>
+            <Constraint ChangeMode="state" Name="">
+              <OrdinalScaledType>
+                <RequiredMaxValue xsi:type="anyType"/>
+                <RequiredValue xsi:type="anyType"/>
+                <RequiredMinValue xsi:type="anyType"/>
+              </OrdinalScaledType>
+            </Constraint>
+            <Attribute AttributeDataType="" ChangeMode="state" ID="" Name="" Unit=""/>
+          </Attribute>
+          <ExternalInterface ChangeMode="state" ID="" Name="" RefBaseClassPath="" xsi:type="InterfaceClassType">
+            <Attribute AttributeDataType="" ChangeMode="state" ID="" Name="" Unit="">
+              <DefaultValue xsi:type="anyType"/>
+              <Value xsi:type="anyType"/>
+              <RefSemantic ChangeMode="state" CorrespondingAttributePath=""/>
+              <Constraint ChangeMode="state" Name="">
+                <OrdinalScaledType>
+                  <RequiredMaxValue xsi:type="anyType"/>
+                  <RequiredValue xsi:type="anyType"/>
+                  <RequiredMinValue xsi:type="anyType"/>
+                </OrdinalScaledType>
+              </Constraint>
+              <Attribute AttributeDataType="" ChangeMode="state" ID="" Name="" Unit=""/>
+            </Attribute>
+          </ExternalInterface>
+        </RoleRequirements>
+        <MappingObject ChangeMode="state">
+          <AttributeNameMapping ChangeMode="state" RoleAttributeName="" SystemUnitAttributeName=""/>
+          <InterfaceNameMapping ChangeMode="state" RoleInterfaceName="" SystemUnitInterfaceName=""/>
+        </MappingObject>
+      </InternalElement>
+      <SupportedRoleClass ChangeMode="state" RefRoleClassPath="">
+        <MappingObject ChangeMode="state">
+          <AttributeNameMapping ChangeMode="state" RoleAttributeName="" SystemUnitAttributeName=""/>
+          <InterfaceNameMapping ChangeMode="state" RoleInterfaceName="" SystemUnitInterfaceName=""/>
+        </MappingObject>
+      </SupportedRoleClass>
+      <InternalLink ChangeMode="state" ID="" Name="" RefPartnerSideA="" RefPartnerSideB=""/>
+      <SystemUnitClass ChangeMode="state" ID="" Name="" RefBaseClassPath=""/>
+    </SystemUnitClass>
+  </SystemUnitClassLib>
+</CAEXFile>

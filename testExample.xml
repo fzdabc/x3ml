@@ -1,0 +1,186 @@
+@prefix schema:  <http://schema.org/> .
+@prefix aml:     <http://vocab.cs.uni-bonn.de/aml#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+
+<urn:uuid:22294239-5958-44dc-92d5-72e6cef8f839>
+      a       aml:SupportedRoleClass ;
+      aml:refRoleClassPath
+              "ManufacturingRoleClasses/Tool" .
+
+<urn:uuid:2364bdb3-a115-4d3c-b48f-6dc52d053da6>
+      a       aml:Attribute ;
+      schema:name "New Attribute" .
+
+<urn:uuid:ec6c4525-a88b-45af-ae70-341b796ee11d>
+      a       aml:SystemUnitClass ;
+      schema:name "ElectricSc      schema:name "EnergySupply" ;
+      aml:refBaseClassPath
+              "MyInterfaces/Energy" .
+
+<urn:uuid:ff43b07c-0984-4c3e-8388-f8b830a4550a>
+      a       aml:RoleClass ;
+      schema:name "Tool" ;
+      aml:refBaseClassPath
+              "BaseRoleClassLib@AutomationMLBaseRoleClassLib/AutomationMLBaseRole" .
+
+<urn:uuid:7d1eea31-e12f-4417-a064-f416268ef845>
+      a       aml:ExternalInterface ;
+      dc:identifier "dd0e0dfe-10f8-4068-845b-9c29699ac79b" ;
+      schema:name "EnergySupply" ;
+      aml:refBaseClassPath
+              "MyInterfaces/Energy" .
+
+<urn:uuid:7d4666b5-2939-4c5b-861a-88572b8315b7>
+      a       aml:InternalElement ;
+      dc:identifier "{19dcf818-4716-4fc1-a85f-28e1938c4c3a}" ;
+      schema:name "secondScrewdriver" ;
+      aml:RefBaseSystemUnitPath
+              "LibOfCommonTools/ElectricScrewdriver" ;
+      aml:hasExternalInterface
+              <urn:uuid:2702014a-5b39-4dd0-9519-e4af36a4e67b> ;
+      aml:hasRoleRequirements
+              <urn:uuid:453de367-2237-4cb2-80cb-3b5bedeb7cda> ;
+      aml:hasSupportedRoleClass
+              <urn:uuid:ca45abe8-e8ce-44f9-b960-877f9f5bcddd> .
+
+<urn:uuid:8d29081b-fc26-4dad-9e1b-53a79451eaea>
+      a       aml:AdditionalInformation ;
+      aml:hasAutomationMLVersion
+              "2.0" ;
+      aml:hasLastWritingDateTime
+              "2012-02-20" ;
+      aml:hasWriterID "AutomationML e.V." ;
+      aml:hasWriterName "AutomationML e.V." ;
+      aml:hasWriterProjectID
+              "AutomationML Tutorial Examples" ;
+      aml:hasWriterProjectTitle
+              "AutomationML Tutorial Examples" ;
+      aml:hasWriterRelease
+              "1.0" ;
+      aml:hasWriterVendor "AutomationML e.V." ;
+      aml:hasWriterVendorURL
+              "www.AutomationML.org" ;
+      aml:hasWriterVersion
+              "1.0" .
+
+<urn:uuid:dfa5e33f-5bd3-46b2-b006-36a8d8e9f371>
+      a       aml:InterfaceClass ;
+      schema:name "Energy" ;
+      aml:refBaseClassPath
+              "BaseInterfaceClassLib@AutomationMLInterfaceClassLib/AutomationMLBaseInterface" .
+
+<urn:uuid:da403b11-d0ac-4c4c-b7d4-98dc71871284>
+      a       aml:ExternalReference ;
+      aml:externalReferenceAlias
+              "BaseInterfaceClassLib" ;
+      aml:externalReferencePath
+              "Libs/InterfaceClass Libraries/AutomationMLInterfaceClassLib.aml" .
+
+<urn:uuid:0d7f2794-d71f-474f-b814-1ad44264cc13>
+      a       aml:InstanceHierarchy ;
+      schema:name "ManufacturingSystem" ;
+      aml:hasInternalElement
+              <urn:uuid:7d4666b5-2939-4c5b-861a-88572b8315b7> , <urn:uuid:91cb6a6d-9826-4c21-a902-13f956ccf83a> .
+
+<urn:uuid:55aad060-9b01-441e-b5d2-ff34b82abe5b>
+      a       aml:SupportedRoleClass ;
+      aml:refRoleClassPath
+              "ManufacturingRoleClasses/Tool" .
+
+<urn:uuid:453de367-2237-4cb2-80cb-3b5bedeb7cda>
+      a       aml:RoleRequirements ;
+      aml:refBaseRoleClassPath
+              "ManufacturingRoleClasses/Tool" .
+
+<urn:uuid:ca45abe8-e8ce-44f9-b960-877f9f5bcddd>
+      a       aml:SupportedRoleClass ;
+      aml:refRoleClassPath
+              "ManufacturingRoleClasses/Tool" .
+
+<urn:uuid:8f839fef-e6b9-4dfa-8094-35b58657e246>
+      a       aml:RoleRequirements ;
+      aml:refBaseRoleClassPath
+              "ManufacturingRoleClasses/Tool" .
+
+<urn:uuid:e0d7e2ed-c325-4c7b-a8b8-dad6f94c1714>
+      a       aml:AdditionalInformation ;
+      aml:hasAutomationMLVersion
+              "2.0" .
+
+<urn:uuid:8911da5d-10b3-4e0e-9ca2-c8905059749d>
+      a       aml:RoleClassLib ;
+      schema:name "ManufacturingRoleClasses" ;
+      aml:hasRoleClass <urn:uuid:ff43b07c-0984-4c3e-8388-f8b830a4550a> ;
+      aml:hasVersion "2.0" .
+
+<urn:uuid:b1e5e034-7315-47d8-a42f-79dbdbd96687>
+      a       aml:SupportedRoleClass ;
+      aml:refRoleClassPath
+              "ManufacturingRoleClasses/Tool" .
+
+<http://vocab.cs.uni-bonn.de/aml#/CAEXFile>
+      a       aml:CAEXFile ;
+      aml:hasAdditionalInformation
+              <urn:uuid:8d29081b-fc26-4dad-9e1b-53a79451eaea> , <urn:uuid:e0d7e2ed-c325-4c7b-a8b8-dad6f94c1714> ;
+      aml:hasExternalReference
+              <urn:uuid:293b914b-17fb-4bfc-ad6b-c0a53e89ff28> , <urn:uuid:da403b11-d0ac-4c4c-b7d4-98dc71871284> ;
+      aml:hasFileName "ExampleTopology.aml" ;
+      aml:hasInstanceHierarchy
+              <urn:uuid:0d7f2794-d71f-474f-b814-1ad44264cc13> ;
+      aml:hasInterfaceClassLib
+              <urn:uuid:e38825f8-2f13-4293-b78d-d615adacc14a> ;
+      aml:hasRoleClassLib <urn:uuid:8911da5d-10b3-4e0e-9ca2-c8905059749d> ;
+      aml:hasSchemeVersion
+              "2.15" ;
+      aml:hasSystemUnitClassLib
+              <urn:uuid:2c38c06f-038f-4a84-81e2-e5f83c4fbae0> .
+
+<urn:uuid:2c38c06f-038f-4a84-81e2-e5f83c4fbae0>
+      a       aml:SystemUnitClassLib ;
+      schema:name "LibOfCommonTools" ;
+      aml:hasSystemUnitClass
+              <urn:uuid:8b37725d-ac46-4a20-8614-ce8636e50139> ;
+      aml:hasVersion "3.0" .
+
+<urn:uuid:91cb6a6d-9826-4c21-a902-13f956ccf83a>
+      a       aml:InternalElement ;
+      dc:identifier "{788eb291-f103-4fdc-aba0-4893b599f556}" ;
+      schema:name "firstScrewdriver" ;
+      aml:RefBaseSystemUnitPath
+              "LibOfCommonTools/ElectricScrewdriver" ;
+      aml:hasAttribute <urn:uuid:5af6ec3d-8d2b-45cc-b0e2-9b4420358ea6> ;
+      aml:hasExternalInterface
+              <urn:uuid:858509e7-739a-4e58-931d-e73e296952f2> ;
+      aml:hasRoleRequirements
+              <urn:uuid:8f839fef-e6b9-4dfa-8094-35b58657e246> ;
+      aml:hasSupportedRoleClass
+              <urn:uuid:55aad060-9b01-441e-b5d2-ff34b82abe5b> .
+
+<urn:uuid:293b914b-17fb-4bfc-ad6b-c0a53e89ff28>
+      a       aml:ExternalReference ;
+      aml:externalReferenceAlias
+              "BaseRoleClassLib" ;
+      aml:externalReferencePath
+              "Libs/RoleClass Libraries/AutomationMLBaseRoleClassLib.aml" .
+
+<urn:uuid:2702014a-5b39-4dd0-9519-e4af36a4e67b>
+      a       aml:ExternalInterface ;
+      dc:identifier "50e10905-ac18-413c-afab-ad8ed1569fff" ;
+      schema:name "EnergySupply" ;
+      aml:refBaseClassPath
+              "MyInterfaces/Energy" .
+
+<urn:uuid:5af6ec3d-8d2b-45cc-b0e2-9b4420358ea6>
+      a       aml:Attribute ;
+      schema:name "New Attribute" .
+
+<urn:uuid:8b37725d-ac46-4a20-8614-ce8636e50139>
+      a       aml:SystemUnitClass ;
+      schema:name "ElectricScrewdriver" ;
+      aml:hasExternalInterface
+              <urn:uuid:7d1eea31-e12f-4417-a064-f416268ef845> ;
+      aml:hasSupportedRoleClass
+              <urn:uuid:b1e5e034-7315-47d8-a42f-79dbdbd96687> .

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<generator_policy>
+    <generator name="ID" prefix="aml">
+        <pattern>/{identifier}</pattern>
+    </generator>
+</generator_policy>

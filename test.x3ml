@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x3ml version="1.0" source_type="xpath">
+    <info>
+        <title>ExampleTolopogy</title>
+        <general_description>Sample test</general_description>
+        <source_info>
+            <source_schema type="?" version="">?</source_schema>
+            <source_collection>?</source_collection>
+        </source_info>
+        <target_info>
+            <target_schema schema_file="" type="" version="">?</target_schema>
+            <target_collection/>
+        </target_info>
+        <target_info>
+            <target_schema schema_file="" type="" version="">?</target_schema>
+            <target_collection/>
+        </target_info>
+        <mapping_info>
+            <mapping_created_by_org>?</mapping_created_by_org>
+            <mapping_created_by_person>?</mapping_created_by_person>
+            <in_collaboration_with/>
+        </mapping_info>
+        <example_data_info>
+            <example_data_from>?</example_data_from>
+            <example_data_contact_person>?</example_data_contact_person>
+            <example_data_source_record xml_link="?">?</example_data_source_record>
+            <example_data_target_record rdf_link="">?</example_data_target_record>
+        </example_data_info>
+    </info>
+    <namespaces>
+        <namespace prefix="rdf" uri="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+        <namespace prefix="rdfs" uri="http://www.w3.org/2000/01/rdf-schema#"/>
+        <namespace prefix="dc" uri="http://purl.org/dc/elements/1.1/"/>
+        <namespace prefix="aml" uri="http://vocab.cs.uni-bonn.de/aml#"/>
+        <namespace prefix="xsd" uri="http://www.w3.org/2001/XMLSchema#"/>
+        <namespace prefix="schema" uri="http://schema.org/"/>
+    </namespaces>
+    <mappings>
+        <mapping>
+            <domain>
+                <source_node>//CAEXFile</source_node>
+                <target_node>
+                    <entity>
+                        <type>aml:CAEXFile</type>
+                        <instance_generator name="UUID"/>
+                    </entity>
+                </target_node>
+            </domain>
+            <link>
+                <path>
+                    <source_relation>
+                       <relation>ExternalReference</relation>
+                    </source_relation>
+                    <target_relation>
+                        <relationship>aml:hasExternalReference</relationship>
+                        <entity>
+                            <type>aml:ExternalReference</type>
+                            <instance_generator name="UUID"/>
+                        </entity>
+                        <relationship>aml:hasPath</relationship>
+                    </target_relation>
+                </path>
+                <range>
+                    <source_node>ExternalReference</source_node>
+                    <target_node>
+                        <entity>
+                            <type>Literal</type>
+                            <instance_generator name="Literal">
+                                <arg name="text">@Path</arg>
+                            </instance_generator>
+                        </entity>
+                    </target_node>
+                </range>
+            </link>
+        </mapping>
+    </mappings>
+    <comments>
+        <comment type="Thesis">
+            <rationale>Industry 4.0 Usecase Evaluation</rationale>
+            <alternatives>?</alternatives>
+            <typical_mistakes>?</typical_mistakes>
+            <local_habits>?</local_habits>
+            <link_to_cook_book>?</link_to_cook_book>
+            <example>
+                <example_source>AutomationML</example_source>
+                <example_target>AutomationML</example_target>
+            </example>
+            <comments_last_update person="me" date="2016-04-07">2016-04-07</comments_last_update>
+        </comment>
+    </comments>
+</x3ml>

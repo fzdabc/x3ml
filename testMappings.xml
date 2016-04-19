@@ -1,0 +1,30 @@
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix crm:     <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<urn:uuid:06d4fcc3-4567-4841-b8ad-94dfffb4d940>
+      a       crm:E41_Appellation ;
+      rdfs:label "COIN_ID_300" .
+
+<urn:uuid:bed50713-e291-4404-bb10-7ebe7a468a41>
+      a       crm:E22_Man-Made_Object ;
+      crm:P1_is_identified_by
+              <urn:uuid:a88e614d-b17f-48d2-acb4-e99f1d5295c4> .
+
+<urn:uuid:a88e614d-b17f-48d2-acb4-e99f1d5295c4>
+      a       crm:E41_Appellation ;
+      rdfs:label "COIN_ID_200" .
+
+<urn:uuid:29656cf9-715d-432c-ba39-078c4eb03d8d>
+      a       crm:E22_Man-Made_Object ;
+      crm:P1_is_identified_by
+              <urn:uuid:06d4fcc3-4567-4841-b8ad-94dfffb4d940> .
+
+<urn:uuid:ebd0aab6-4a32-4161-b936-059e40703206>
+      a       crm:E22_Man-Made_Object ;
+      crm:P1_is_identified_by
+              <urn:uuid:fd4416f2-4b9b-4f33-852a-0d95379733e8> .
+
+<urn:uuid:fd4416f2-4b9b-4f33-852a-0d95379733e8>
+      a       crm:E41_Appellation ;
+      rdfs:label "COIN_ID_100" .
